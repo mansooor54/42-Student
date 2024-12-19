@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:57:03 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:57:04 by malmarzo         ###   ########.fr       */
+/*   Created: 2024/12/19 10:54:01 by malmarzo          #+#    #+#             */
+/*   Updated: 2024/12/19 12:05:48 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+int	ft_atoi(const char *str)
 {
-	t_list	*node;
+	int					i;
+	int					sign;
+	unsigned long int	result;
 
-	if (!lst)
-		return ;
-	while (*lst)
-	{	
-		node = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = node;
+	i = 0;
+	sign = 1;
+	result = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
 	}
+	else if (str[i] == '+')
+		i++;
+	while (ft_isdigit(str[i]))
+	{
+		result *= 10;
+		result += str[i] - '0';
+		i++;
+	}
+	return (result * sign);
 }
