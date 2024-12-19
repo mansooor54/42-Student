@@ -6,7 +6,7 @@
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:12:49 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 14:40:22 by malmarzo         ###   ########.fr       */
+/*   Updated: 2024/12/19 15:02:39 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <stdio.h>  // لـ printf
 #include <stdlib.h> // لـ malloc و free
 
+//char	*ft_strjoin(char const *s1, char const *s2);
+ 
 int	main(void)
 {
 	char	*str1;
