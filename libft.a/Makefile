@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/19 11:02:11 by malmarzo          #+#    #+#              #
-#    Updated: 2024/12/19 11:02:13 by malmarzo         ###   ########.fr        #
+#    Created: 2024/12/21 11:26:40 by marvin            #+#    #+#              #
+#    Updated: 2024/12/21 11:26:40 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,22 +32,30 @@ CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
+# Rule to convert .c to .o
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
+# Rule to create the library
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
 
+# Default target
 all: ${NAME}
 
+# Rule for bonus files
 bonus: ${NAME} ${OBJSB}
 	${LIBC} ${NAME} ${OBJSB}
+
+# Cleaning object files
 clean:
 	${RM} ${OBJS} ${OBJSB}
 
+# Full clean
 fclean: clean
-	${RM} ${NAME} ${bonus} 
+	${RM} ${NAME}
 
+# Rebuild
 re: fclean all
 
-.PHONY : all bonus clean fclean re
+.PHONY: all bonus clean fclean re
