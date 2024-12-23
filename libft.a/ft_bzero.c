@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void    ft_bzero (void *s, size_t n)
 {
-	size_t	i;
-	char	*str;
-
+    size_t  i;
+    char    *str;
+    
 	str = s;
 	i = 0;
 	while (i < n)
@@ -26,26 +26,21 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-int main()
-{
-    char buffer[10] = "Hello42!"; // Original buffer
-    
-    printf("Before ft_bzero: %s\n", buffer); // Print the initial buffer content
-
-    // Clear the first 5 bytes of the buffer
-    ft_bzero(buffer, 5);
-
-    // Print the buffer content after clearing
-    printf("After ft_bzero: ");
-    
-    int i = 0; // Use while loop for printing
-    while (i < 10)
-    {
-        printf("%d ", buffer[i]); // Print ASCII value of each byte
-        i++;
-    }
-    printf("\n");
-
-    return 0;
-}
-
+// int main()
+// {
+//     char buffer[10] = "Hello42!"; // Original buffer  
+//     // Print the initial buffer content
+//     printf("Before ft_bzero: %s\n", buffer);
+//     // Clear the first 5 bytes of the buffer
+//     ft_bzero(buffer, 5);
+//     // Print the buffer content after clearing
+//     printf("After ft_bzero: ");
+//     int i = 0; // Use while loop for printing
+//     while (i < 10)
+//     {
+//         printf("%d ", buffer[i]); // Print ASCII value of each byte
+//         i++;
+//     }
+//     printf("\n");
+//     return  (0);
+// }

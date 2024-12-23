@@ -39,9 +39,11 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-int main()
+int	main(void)
 {
-	char *str = "1234";
+	char	*str;
+
+	*str = "1234";
 	printf("%d\n", ft_atoi(str));
-	return 0;
+	return (0);
 }
