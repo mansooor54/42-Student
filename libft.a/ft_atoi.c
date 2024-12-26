@@ -6,7 +6,7 @@
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:54:01 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 12:05:48 by malmarzo         ###   ########.fr       */
+/*   Updated: 2024/12/26 12:39:28 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-int	main(void)
-{
-	char	*str;
+// int	main(void)
+// {
+// 	char	*str;
 
-	*str = "1234";
-	printf("%d\n", ft_atoi(str));
-	return (0);
-}
+// 	*str = "1234";
+// 	printf("%d\n", ft_atoi(str));
+// 	return (0);
+// }
