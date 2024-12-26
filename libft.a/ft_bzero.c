@@ -6,17 +6,17 @@
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:54:15 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:54:19 by malmarzo         ###   ########.fr       */
+/*   Updated: 2024/12/26 09:56:35 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero (void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    size_t  i;
-    char    *str;
-    
+	size_t	i;
+	char	*str;
+
 	str = s;
 	i = 0;
 	while (i < n)
@@ -28,7 +28,7 @@ void    ft_bzero (void *s, size_t n)
 
 // int main()
 // {
-//     char buffer[10] = "Hello42!"; // Original buffer  
+//     char buffer[10] = "Hello42!"; // Original buffer
 //     // Print the initial buffer content
 //     printf("Before ft_bzero: %s\n", buffer);
 //     // Clear the first 5 bytes of the buffer
@@ -42,5 +42,5 @@ void    ft_bzero (void *s, size_t n)
 //         i++;
 //     }
 //     printf("\n");
-//     return  (0);
+//     return ((0));
 // }

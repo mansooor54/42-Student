@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:55:21 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/26 09:58:09 by malmarzo         ###   ########.fr       */
+/*   Created: 2024/12/19 10:59:07 by malmarzo          #+#    #+#             */
+/*   Updated: 2024/12/19 10:59:08 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
-}
+	char	*new;
+	int		i;
+	int		j;
 
-int	main(void)
-{
-	char	c;
-
-	c = 'a';
-	printf("%d\n", ft_isalnum(c));
-	return (0);
+	i = 0;
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	new = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!new)
+		return (NULL);
+	while (s1[i])
+	{
+		new[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+	{
+		new[i] = s2[j];
+		i++;
+		j++;
+	}
+	new[i] = '\0';
+	return (new);
 }

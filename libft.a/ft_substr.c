@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:55:21 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/26 09:58:09 by malmarzo         ###   ########.fr       */
+/*   Created: 2024/12/19 10:59:54 by malmarzo          #+#    #+#             */
+/*   Updated: 2024/12/19 10:59:55 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
-}
+	char	*new;
+	size_t	slen;
+	size_t	finish;
 
-int	main(void)
-{
-	char	c;
-
-	c = 'a';
-	printf("%d\n", ft_isalnum(c));
-	return (0);
+	if (!s)
+		return (0);
+	slen = ft_strlen(s);
+	finish = 0;
+	if (start < slen)
+		finish = slen - start;
+	if (finish > len)
+		finish = len;
+	new = (char *)malloc(sizeof(char) * (finish + 1));
+	if (!new)
+		return (0);
+	ft_strlcpy(new, s + start, finish + 1);
+	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:55:53 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:55:55 by malmarzo         ###   ########.fr       */
+/*   Updated: 2024/12/26 10:03:01 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,11 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-int main()
+int	main(void)
 {
-	char c = '1';
+	char	c;
+
+	c = '1';
 	printf("%d\n", ft_isdigit(c));
-	return 0;
+	return (0);
 }
