@@ -6,7 +6,7 @@
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:56:00 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/26 10:16:16 by malmarzo         ###   ########.fr       */
+/*   Updated: 2024/12/26 13:53:55 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,24 @@ int	ft_isprint(int c)
 
 // 	return (0);
 // }
+
+// Explanation of ft_isprint
+// The ft_isprint function is a custom implementation that checks
+//     whether a given character is a printable character. It works as follows:
+
+// The isprint() function tests for any printing character, including space
+//   (` ').  The value of the argument must be representable as an unsigned
+//      char or the value of EOF.
+
+//      In the ASCII character set, this includes the following characters (pre-
+//      ceded by their numeric values, in octal):
+
+// Input: An integer c, typically representing a character in ASCII.
+// Condition: Checks if c is within the printable range of ASCII 
+//    characters, which are:
+// From 32 (space ' ') to 126 (tilde '~').
+// Output:
+// Returns 1 (true) if c is printable.
+// Returns 0 (false) otherwise.
+// This function mimics the behavior of the standard 
+//     C library function isprint()
