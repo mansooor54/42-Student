@@ -54,3 +54,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(new, (char *)s1, size + 1);
 	return (new);
 }
+
+// int main()
+// {
+//     char *str = "xxxHelloxxx";
+//     char *set = "x";
+//     char *trimmed = ft_strtrim(str, set);
+
+//     if (trimmed)
+//     {
+//         printf("Original: \"%s\"\n", str);
+//         printf("Trimmed: \"%s\"\n", trimmed);
+//         free(trimmed); // Don't forget to free the allocated memory
+//     }
+//     else
+//     {
+//         printf("Memory allocation failed.\n");
+//     }
+
+//     return 0;
+// }
