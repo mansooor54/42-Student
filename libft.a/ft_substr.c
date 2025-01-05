@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char	*new;
 	size_t	slen;
 	size_t	finish;
 
-	if (!s)
+	if (!str)
 		return (0);
-	slen = ft_strlen(s);
+	slen = ft_strlen(str);
 	finish = 0;
 	if (start < slen)
 		finish = slen - start;
@@ -29,6 +29,28 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new = (char *)malloc(sizeof(char) * (finish + 1));
 	if (!new)
 		return (0);
-	ft_strlcpy(new, s + start, finish + 1);
+	ft_strlcpy(new, str + start, finish + 1);
 	return (new);
 }
+
+// int main()
+// {
+//     char str[] = "Hello, 42 School!";
+//     char *substr;
+
+//     // Extract substring starting at index 7, with max length 5
+//     substr = ft_substr(str, 7, 5);
+
+//     if (substr)
+//     {
+//         printf("Original string: %s\n", str);
+//         printf("Extracted substring: %s\n", substr);
+//         free(substr); // Free allocated memory
+//     }
+//     else
+//     {
+//         printf("Memory allocation failed or invalid input.\n");
+//     }
+
+//     return 0;
+// }
