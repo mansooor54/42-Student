@@ -42,19 +42,19 @@ char	*ft_itoa(int n)
 	char				*s;
 	long int			len;
 	unsigned int		number;
-	int					sign;
 
-	sign = 1;
 	len = ft_len(n);
 	s = (char *)malloc(sizeof(char) * (len + 1));
 	if (!(s))
 		return (NULL);
 	s[len--] = '\0';
 	if (n == 0)
+	{
 		s[0] = '0';
+		return (s);
+	}
 	if (n < 0)
 	{
-		sign *= -1;
 		number = n * -1;
 		s[0] = '-';
 	}
