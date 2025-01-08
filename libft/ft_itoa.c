@@ -63,3 +63,28 @@ char	*ft_itoa(int n)
 	s = ft_char(s, number, len);
 	return (s);
 }
+
+// int	main(void)
+// {
+// 	int		numbers[] = {0, -123, 456, -2147483648, 2147483647};
+// 	int		i;
+// 	char	*result;
+
+// 	i = 0;
+// 	printf("Testing ft_itoa:\n");
+// 	while (i < 5)
+// 	{
+// 		result = ft_itoa(numbers[i]);
+// 		if (result)
+// 		{
+// 			printf("Number: %d -> String: %s\n", numbers[i], result);
+// 			free(result);
+// 		}
+// 		else
+// 		{
+// 			printf("Memory allocation failed for number: %d\n", numbers[i]);
+// 		}
+// 		i++;
+// 	}
+// 	return (0);
+// }

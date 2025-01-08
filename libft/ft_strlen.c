@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/31 00:13:39 by marvin            #+#    #+#             */
-/*   Updated: 2024/12/31 00:13:39 by marvin           ###   ########.fr       */
+/*   Created: 2024/12/19 10:59:20 by malmarzo          #+#    #+#             */
+/*   Updated: 2024/12/19 10:59:21 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+size_t	ft_strlen(const char *str)
 {
-	int		count;
-	t_list	*node;
+	size_t	i;
 
-	node = lst;
-	count = 0;
-	while (node != NULL)
-	{
-		count++;
-		node = node->next;
-	}
-	return (count);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
 /*   Created: 2024/12/19 10:56:00 by malmarzo          #+#    #+#             */
 /*   Updated: 2024/12/26 13:53:55 by malmarzo         ###   ########.fr       */
 /*                                                                            */
@@ -21,18 +24,23 @@ int	ft_isprint(int c)
 
 // int	main(void)
 // {
-// 	char test_chars[] = {'A', ' ', '\n', 127, '9', '~'};
-// 	int num_chars = sizeof(test_chars) / sizeof(test_chars[0]);
+// 	char test_chars[] = {'B', ' ', '\n', 127, '9', '~'};
+// 	int num_chars;
+// 	int i;
 
+// 	num_chars = sizeof(test_chars) / sizeof(test_chars[0]);
+// 	i = 0;
 // 	printf("Testing ft_isprint function:\n");
-
-// 	for (int i = 0; i < num_chars; i++)
+// 	while (i < num_chars)
 // 	{
-// 		char c = test_chars[i];
-// 		printf("Character: '%c' (ASCII: %d) -> ft_isprint: %d\n", (c >= 32
-// 				&& c <= 126) ? c : '.', c, ft_isprint(c));
+// 		if (test_chars[i] >= 32 && test_chars[i] <= 126)
+// 			printf("Character: '%c' (ASCII: %d) -> ft_isprint: %d\n",
+// 				test_chars[i], test_chars[i], ft_isprint(test_chars[i]));
+// 		else
+// 			printf("Character: '.' (ASCII: %d) -> ft_isprint: %d\n",
+// 				test_chars[i], ft_isprint(test_chars[i]));
+// 		i++;
 // 	}
-
 // 	return (0);
 // }
 
@@ -44,15 +52,16 @@ int	ft_isprint(int c)
 //   (` ').  The value of the argument must be representable as an unsigned
 //      char or the value of EOF.
 
-//      In the ASCII character set, this includes the following characters (pre-
+//      In the ASCII character set,
+//	this includes the following characters (pre-
 //      ceded by their numeric values, in octal):
 
 // Input: An integer c, typically representing a character in ASCII.
-// Condition: Checks if c is within the printable range of ASCII 
+// Condition: Checks if c is within the printable range of ASCII
 //    characters, which are:
 // From 32 (space ' ') to 126 (tilde '~').
 // Output:
 // Returns 1 (true) if c is printable.
 // Returns 0 (false) otherwise.
-// This function mimics the behavior of the standard 
+// This function mimics the behavior of the standard
 //     C library function isprint()

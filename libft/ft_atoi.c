@@ -39,11 +39,9 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-// int	main(void)
+// int main()
 // {
-// 	char	*str;
-
-// 	*str = "1234";
-// 	printf("%d\n", ft_atoi(str));
-// 	return (0);
+// 	char *str;
+// 	str = "  -50";
+// 	printf("%d", ft_atoi(str));
 // }
