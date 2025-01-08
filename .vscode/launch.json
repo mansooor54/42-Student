@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/mansoor_almarzooqi/Desktop/42-Student-1/libft",
+      "program": "/Users/mansoor_almarzooqi/Desktop/42-Student-1/libft/build/Debug/outDebug"
+    }
+  ]
+}
