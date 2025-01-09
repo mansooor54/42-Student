@@ -5,6 +5,9 @@ This project aims to code a C library regrouping usual functions that we’ll be
 For check all code like maniolate
 https://github.com/xicodomingues/francinette
 
+To start check type: $paco
+To check deeper type: $francinette --strict
+
 # Cleaner Install
 For Device Cleaner if there no space in hard this link show you and help you to clean
 https://github.com/ombhd/Cleaner_42/tree/master
