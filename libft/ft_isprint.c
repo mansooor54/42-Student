@@ -2,14 +2,11 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+        
-	+:+     */
-/*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+      
-	+#+        */
-/*                                                +#+#+#+#+#+  
-	+#+           */
-/*   Created: 2024/12/19 10:56:00 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/26 13:53:55 by malmarzo         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/09 12:49:46 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/09 12:49:46 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +40,7 @@ int	ft_isprint(int c)
 // 	}
 // 	return (0);
 // }
-
+//========================================================
 // Explanation of ft_isprint
 // The ft_isprint function is a custom implementation that checks
 //     whether a given character is a printable character. It works as follows:

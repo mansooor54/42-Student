@@ -6,11 +6,13 @@
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:56:06 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:56:08 by malmarzo         ###   ########.fr       */
+/*   Updated: 2025/01/05 10:56:08 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_itoa(int n);
 
 static char	*ft_char(char *s, unsigned int number, long int len)
 {
