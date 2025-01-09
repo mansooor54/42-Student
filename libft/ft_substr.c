@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:59:54 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:59:55 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/09 10:48:47 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/09 10:48:47 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	if (!str)
 		return (0);
 	slen = ft_strlen(str);
-	finish = 0;
-	if (start < slen)
-		finish = slen - start;
+	if (slen == 0 || start >= slen)
+		return (ft_strdup(""));
+	finish = slen - start;
 	if (finish > len)
 		finish = len;
 	new = (char *)malloc(sizeof(char) * (finish + 1));
@@ -52,5 +52,5 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 //         printf("Memory allocation failed or invalid input.\n");
 //     }
 
-//     return 0;
+//     return (0);
 // }

@@ -1,6 +1,10 @@
 # Libft-42
 This project aims to code a C library regrouping usual functions that we’ll be allowed to use in all our other  42 projects.
 
+# Mini Maniolate:
+For check all code like maniolate
+https://github.com/xicodomingues/francinette
+
 # Cleaner Install
 For Device Cleaner if there no space in hard this link show you and help you to clean
 https://github.com/ombhd/Cleaner_42/tree/master
