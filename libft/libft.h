@@ -20,13 +20,6 @@
 # include <fcntl.h>
 # include <unistd.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-//Functions from <ctype.h>
 int		ft_isalnum(int i);
 int		ft_isalpha(int i);
 int		ft_isascii(int i);
@@ -34,7 +27,6 @@ int		ft_isdigit(int i);
 int		ft_isprint(int i);
 int		ft_tolower(int i);
 int		ft_toupper(int i);
-//Functions from <string.h>
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -49,10 +41,8 @@ size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
-//Functions from <stdlib.h>
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
-//Non-standard functions
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);

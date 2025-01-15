@@ -18,7 +18,7 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_strnstr.c ft_atoi.c ft_strrchr.c ft_substr.c \
        ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
        ft_strmapi.c ft_striteri.c ft_putchar_fd.c \
-	   ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+	ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 OBJS = ${SRCS:%.c=%.o}
 NAME = libft.a
@@ -27,26 +27,22 @@ CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
-# Rule to convert .c to .o
+all: ${NAME}
+
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-# Rule to create the library
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
 
-# Default target
-all: ${NAME}
 
-# Cleaning object files
 clean:
 	${RM} ${OBJS}
 
-# Full clean
 fclean: clean
 	${RM} ${NAME}
 
-# Rebuild
+
 re: fclean all
 
 .PHONY: all bonus clean fclean re

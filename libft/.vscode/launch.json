@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/malmarzo/Desktop/42-Student/libft.a",
-      "program": "/Users/malmarzo/Desktop/42-Student/libft.a/build/Debug/outDebug"
+      "cwd": "/Users/malmarzo/Desktop/42-Student/libft",
+      "program": "/Users/malmarzo/Desktop/42-Student/libft/build/Debug/outDebug"
     }
   ]
 }

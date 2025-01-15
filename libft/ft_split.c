@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void	be_free(char **str, int index)
+static void	free_memory(char **str, int index)
 {
 	int	i;
 
@@ -25,26 +25,26 @@ static void	be_free(char **str, int index)
 	free(str);
 }
 
-static int	num_of_words(char const *str, char c)
+static int	count_word(char const *str, char c)
 {
 	int	i;
-	int	count;
+	int	word_count;
 
 	i = 0;
-	count = 0;
+	word_count = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] != '\0' && str[i] == c)
 			i++;
 		if (str[i] != '\0')
-			count++;
+			word_count++;
 		while (str[i] != '\0' && str[i] != c)
 			i++;
 	}
-	return (count);
+	return (word_count);
 }
 
-static int	strlen_sep(char const *str, char c)
+static int	word_strlen(char const *str, char c)
 {
 	int	i;
 
@@ -54,13 +54,13 @@ static int	strlen_sep(char const *str, char c)
 	return (i);
 }
 
-static char	*alloc_word(char const *str, char c)
+static char	*allocate_word(char const *str, char c)
 {
 	int		i;
 	int		word_len;
 	char	*final;
 
-	word_len = strlen_sep(str, c);
+	word_len = word_strlen(str, c);
 	final = (char *)malloc(sizeof(char) * (word_len + 1));
 	if (!final)
 		return (NULL);
@@ -79,7 +79,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	char	**arr;
 
-	arr = (char **)ft_calloc((num_of_words(s, c) + 1), sizeof(char *));
+	arr = (char **)ft_calloc((count_word(s, c) + 1), sizeof(char *));
 	i = 0;
 	if (arr == NULL || s == NULL)
 		return (NULL);
@@ -89,10 +89,10 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s != '\0')
 		{
-			arr[i] = alloc_word(s, c);
+			arr[i] = allocate_word(s, c);
 			if (arr[i] == NULL)
 			{
-				be_free(arr, i);
+				free_memory(arr, i);
 				return (NULL);
 			}
 			i++;
@@ -102,3 +102,16 @@ char	**ft_split(char const *s, char c)
 	}
 	return (arr);
 }
+
+// int main()
+// {
+// 	char *str = "Mansoor Abdullah Almarzoqi";
+// 	char **arr = ft_split(str, ' ');
+// 	int i = 0;
+// 	while (arr[i] != NULL)
+// 	{
+// 		printf("%s\n", arr[i]);
+// 		i++;
+// 	}
+// 	return 0;
+// }
