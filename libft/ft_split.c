@@ -74,7 +74,7 @@ static char	*new_word(char const *str, char c)
 	return (the_word);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	int		i;
 	char	**new_array;
