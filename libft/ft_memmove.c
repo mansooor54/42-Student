@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:58:03 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:58:04 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/16 09:24:23 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/16 09:24:23 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,19 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			i;
-	char			j;
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char	*md_dest;
+	unsigned char	*ms_src;
 
+	md_dest = (unsigned char *)dest;
+	ms_src = (unsigned char *)src;
 	i = 0;
-	j = 1;
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (!dest && !src)
+	if (md_dest == NULL && ms_src == NULL)
 		return (NULL);
-	if (dest > src)
-	{
-		j = -1;
-		d += n - 1;
-		s += n - 1;
-	}
-	while (i < n)
-	{
-		*d = *s;
-		d += j;
-		s += j;
-		i++;
-	}
+	if (md_dest > ms_src)
+		while (++i <= n)
+			md_dest[n - i] = ms_src[n - i];
+	else
+		while (n-- > 0)
+			*(md_dest++) = *(ms_src++);
 	return (dest);
 }

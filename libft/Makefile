@@ -35,7 +35,6 @@ all: ${NAME}
 ${NAME}: ${OBJS}
 	${LIBC} ${NAME} ${OBJS}
 
-
 clean:
 	${RM} ${OBJS}
 
@@ -45,4 +44,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

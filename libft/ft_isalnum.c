@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:55:21 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/26 09:58:09 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/16 09:20:29 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/16 09:20:29 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = 'a';
-// 	printf("%d\n", ft_isalnum(c));
-// 	return (0);
-// }

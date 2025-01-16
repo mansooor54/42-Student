@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:55:53 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/26 10:03:01 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/16 09:21:46 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/16 09:21:46 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = '1';
-// 	printf("%d\n", ft_isdigit(c));
-// 	return (0);
-// }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/09 12:50:29 by malmarzo          #+#    #+#             */
-/*   Updated: 2025/01/09 12:50:29 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/16 09:20:11 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/16 09:20:11 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,24 +22,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(array, (nmemb * size));
 	return (array);
 }
-
-// int	main(void)
-// {
-// 	int	*arr;
-// 	int	i;
-
-// 	arr = (int *)ft_calloc(5, sizeof(int));
-// 	i = 0;
-// 	if (arr == NULL)
-// 	{
-// 		printf("Memory allocation failed\n");
-// 		return (1);
-// 	}
-// 	while (i < 5)
-// 	{
-// 		printf("%d", arr[i]);
-// 		i++;
-// 	}
-// 	free(arr);
-// 	return (0);
-// }

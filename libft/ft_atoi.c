@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 10:39:05 by malmarzo          #+#    #+#             */
-/*   Updated: 2025/01/15 10:39:05 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/16 09:15:37 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/16 09:15:37 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_atoi(const char *str)
 {
@@ -23,6 +22,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
+	digit = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	if ((str[i] == '-') || (str[i] == '+'))
@@ -38,11 +38,4 @@ int	ft_atoi(const char *str)
 	if (result >= __LONG_LONG_MAX__ || digit > 19)
 		return (-(sign == 1));
 	return (result * sign);
-}
-
-int	main(void)
-{
-	char *str = "      -0000000001212000021222456789";
-	printf("the numbers are %d\n", atoi(str));
-	printf("the numbers are %d\n", ft_atoi(str));
 }

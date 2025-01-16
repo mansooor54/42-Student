@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:58:56 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:58:57 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/16 09:40:46 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/16 09:40:46 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ char	*ft_strdup(const char *src)
 	dest[size] = '\0';
 	return (dest);
 }
-
-//DESCRIPTION
-//The strdup() function allocates sufficient memory for a copy of the
-//string s1, does the copy, and returns a pointer to it.  The pointer may
-//subsequently be used as an argument to the function free(3).
-
-//If insufficient memory is available, NULL is returned 
-//and errno is set to

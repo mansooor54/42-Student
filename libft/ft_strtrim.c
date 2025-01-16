@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: malmarzo <malmarzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/19 10:59:47 by malmarzo          #+#    #+#             */
-/*   Updated: 2024/12/19 10:59:48 by malmarzo         ###   ########.fr       */
+/*   Created: 2025/01/16 09:49:20 by malmarzo          #+#    #+#             */
+/*   Updated: 2025/01/16 09:49:20 by malmarzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,23 +54,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(new, (char *)s1, size + 1);
 	return (new);
 }
-
-// int main()
-// {
-//     char *str = "xxxHelloxxx";
-//     char *set = "x";
-//     char *trimmed = ft_strtrim(str, set);
-
-//     if (trimmed)
-//     {
-//         printf("Original: \"%s\"\n", str);
-//         printf("Trimmed: \"%s\"\n", trimmed);
-//         free(trimmed); // Don't forget to free the allocated memory
-//     }
-//     else
-//     {
-//         printf("Memory allocation failed.\n");
-//     }
-
-//     return 0;
-// }
