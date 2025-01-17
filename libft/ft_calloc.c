@@ -14,11 +14,15 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*array;
+	size_t	total;
+	void	*mem;
 
-	array = (void *)malloc(count * size);
-	if (!(array))
+	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
-	ft_bzero(array, (count * size));
-	return (array);
+	total = count * size;
+	mem = malloc(total);
+	if (mem == NULL)
+		return (NULL);
+	ft_memset(mem, 0, total);
+	return (mem);
 }
