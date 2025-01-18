@@ -14,20 +14,20 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	unsigned int	length;
-	char			*result;
+	size_t	i;
+	size_t	len;
+	char	*result;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
-	length = ft_strlen(s);
-	result = malloc(length * sizeof(char) + 1);
+	len = ft_strlen(s);
+	result = (char *)ft_calloc((len + 1), sizeof(char));
 	if (!result)
 		return (NULL);
 	i = 0;
-	while (i < length)
+	while (i < len)
 	{
-		result[i] = (*f)(i, s[i]);
+		result[i] = f(i, s[i]);
 		i++;
 	}
 	result[i] = '\0';
