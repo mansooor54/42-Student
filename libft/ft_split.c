@@ -12,84 +12,94 @@
 
 #include "libft.h"
 
-static void	free_memory(char **str, int index)
-{
-	while (index >= 0)
-		free(str[index--]);
-	free(str);
-}
-
-static int	count_word(char const *str, char c)
-{
-	int	i;
-	int	word_count;
-
-	i = 0;
-	word_count = 0;
-	while (str[i])
-	{
-		while (str[i] && str[i] == c)
-			i++;
-		if (str[i])
-			word_count++;
-		while (str[i] && str[i] != c)
-			i++;
-	}
-	return (word_count);
-}
-
-static int	word_strlen(const char *str, char c)
+int	ft_safe_malloc(char **word_vector, int position, size_t buffer)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] && str[i] != c)
-		i++;
-	return (i);
-}
-
-static char	*new_word(char const *str, char c)
-{
-	int		i;
-	int		word_len;
-	char	*the_word;
-
-	word_len = word_strlen(str, c);
-	the_word = (char *)malloc(sizeof(char) * (word_len + 1));
-	if (!the_word)
-		return (NULL);
-	i = 0;
-	while (i < word_len)
+	word_vector[position] = malloc(buffer);
+	if (NULL == word_vector[position])
 	{
-		the_word[i] = str[i];
-		i++;
+		while (i < position)
+			free(word_vector[i++]);
+		free(word_vector);
+		return (1);
 	}
-	the_word[i] = '\0';
-	return (the_word);
+	return (0);
 }
 
-char	**ft_split(const char *s, char c)
+void	my_strlcpy(char *dst, const char *src, size_t dstsize)
 {
+	while (*src && --dstsize)
+		*dst++ = *src++;
+	*dst = '\0';
+}
+
+int	insert_words(char **word_vector, char const *s, char delimeter)
+{
+	size_t	len;
 	int		i;
-	char	**new_array;
 
 	i = 0;
-	new_array = (char **)ft_calloc((count_word(s, c) + 1), sizeof(char *));
-	if (!new_array || !s)
-		return (NULL);
 	while (*s)
 	{
-		while (*s && *s == c)
-			s++;
-		if (*s)
+		len = 0;
+		while (*s == delimeter && *s)
+			++s;
+		while (*s != delimeter && *s)
 		{
-			new_array[i] = new_word(s, c);
-			if (new_array[i] == NULL)
-				return (free_memory(new_array, i), NULL);
-			i++;
-			while (*s && *s != c)
-				s++;
+			++len;
+			++s;
+		}
+		if (len)
+		{
+			if (ft_safe_malloc(word_vector, i, len + 1))
+				return (1);
+			my_strlcpy(word_vector[i], s - len, len + 1);
+		}
+		++i;
+	}
+	return (0);
+}
+
+size_t	count_words(char const *s, char delimeter)
+{
+	size_t	words_cont;
+	int		inside_word;
+
+	words_cont = 0;
+	while (*s)
+	{
+		inside_word = 0;
+		while (*s == delimeter && *s)
+			++s;
+		while (*s != delimeter && *s)
+		{
+			if (!inside_word)
+			{
+				++words_cont;
+				inside_word = 1;
+			}
+			++s;
 		}
 	}
-	return (new_array);
+	return (words_cont);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	words_cont;
+	char	**word_vector;
+
+	if (NULL == s)
+		return (NULL);
+	words_cont = 0;
+	words_cont = count_words(s, c);
+	word_vector = malloc((words_cont + 1) * sizeof(char *));
+	if (NULL == word_vector)
+		return (NULL);
+	word_vector[words_cont] = NULL;
+	if (insert_words(word_vector, s, c))
+		return (NULL);
+	return (word_vector);
 }
