@@ -16,19 +16,19 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*new;
 	size_t	slen;
-	size_t	finish;
+	size_t	actual_len;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	slen = ft_strlen(s);
 	if (slen == 0 || start >= slen)
 		return (ft_strdup(""));
-	finish = slen - start;
-	if (finish > len)
-		finish = len;
-	new = (char *)malloc(sizeof(char) * (finish + 1));
+	actual_len = slen - start;
+	if (actual_len > len)
+		actual_len = len;
+	new = (char *)malloc(sizeof(char) * (actual_len + 1));
 	if (!new)
-		return (0);
-	ft_strlcpy(new, s + start, finish + 1);
+		return (NULL);
+	ft_strlcpy(new, s + start, actual_len + 1);
 	return (new);
 }
