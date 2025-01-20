@@ -86,7 +86,7 @@ size_t	count_words(char const *s, char delimeter)
 	return (words_cont);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	size_t	words_cont;
 	char	**word_vector;
