@@ -4,3 +4,7 @@ https://github.com/appinha/42cursus-00-Libft/blob/master/libft/srcs/mem/ft_memmo
 This is very good for practices: https://github.com/mcombeau
 
 https://42-cursus.gitbook.io/guide
+
+
+
+https://github.com/openbsd/src/blob/master/lib/libc/string/strlcat.c
