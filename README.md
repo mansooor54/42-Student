@@ -5,6 +5,8 @@ This is very good for practices: https://github.com/mcombeau
 
 https://42-cursus.gitbook.io/guide
 
+https://github.com/sofiabuenos
+
 
 
 https://github.com/openbsd/src/blob/master/lib/libc/string/strlcat.c
